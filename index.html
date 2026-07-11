@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CellPang</title>
   <style>
-    /* Centers everything on the screen nicely */
+    /* Positions the button at the top-left with some clean spacing */
     body {
-      background-color: #1e1e2e; /* A slightly richer, modern dark tone */
+      background-color: #1e1e2e;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start; /* Aligns horizontally to the left */
+      align-items: flex-start;     /* Aligns vertically to the top */
       height: 100vh;
       margin: 0;
+      padding: 24px;               /* Adds a nice breathing room from the screen edge */
+      box-sizing: border-box;
     }
 
     /* Turns the raw link into a clean, clickable button */
     a {
       font-size: 28px;
-      color: #89b4fa; /* A vibrant pastel blue */
+      color: #89b4fa;
       text-decoration: none;
       font-weight: 600;
       border: 2px solid #89b4fa;
