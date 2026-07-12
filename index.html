@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skidhi</title>
-  <style>
-    /* Positions the button at the top-left with some clean spacing */
-    body {
-      background-color: #1e1e2e;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      display: flex;
-      justify-content: flex-start; /* Aligns horizontally to the left */
-      align-items: flex-start;     /* Aligns vertically to the top */
-      height: 100vh;
-      margin: 0;
-      padding: 24px;               /* Adds a nice breathing room from the screen edge */
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skidhi</title>
+    <style>
+        /* Positions the button at the top-left with some clean spacing */
+        body {
+            background-color: #1e1e2e;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start; /* Aligns horizontally to the left */
+            align-items: flex-start; /* Aligns vertically to the top */
+            height: 100vh;
+            margin: 0;
+            padding: 24px; /* Adds a nice breathing room from the screen edge */
+            box-sizing: border-box;
+        }
 
-    /* Turns the raw link into a clean, clickable button */
-    a {
-      font-size: 28px;
-      color: #89b4fa;
-      text-decoration: none;
-      font-weight: 600;
-      border: 2px solid #89b4fa;
-      padding: 14px 28px;
-      border-radius: 12px;
-      transition: all 0.25s ease-in-out;
-    }
+        /* Turns the raw link into a clean, clickable button */
+        a {
+            font-size: 28px;
+            color: #89b4fa;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #89b4fa;
+            padding: 14px 28px;
+            border-radius: 12px;
+            transition: all 0.25s ease-in-out;
+        }
 
-    /* Smooth hover effect */
-    a:hover {
-      background-color: #89b4fa;
-      color: #1e1e2e;
-      box-shadow: 0 8px 24px rgba(137, 180, 250, 0.3);
-      transform: translateY(-2px);
-    }
-  </style>
+        /* Smooth hover effect */
+        a:hover {
+            background-color: #89b4fa;
+            color: #1e1e2e;
+            box-shadow: 0 8px 24px rgba(137, 180, 250, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
-  <a href="https://skxdhi.github.io/CellPang">CellPang</a>
+
+    <!-- Audio element set to loop -->
+    <audio id="bgMusic" src="10. Special World.mp3" loop></audio>
+
+    <a href="https://skxdhi.github.io/CellPang">CellPang</a>
+
+    <!-- JavaScript to trigger playback when the page loads -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("bgMusic");
+            audio.play().catch(function(error) {
+                console.log("Autoplay prevented: User needs to interact with the page first.");
+            });
+        });
+    </script>
 </body>
 </html>
